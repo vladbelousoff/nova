@@ -35,6 +35,7 @@ set(
 set(
         SOURCES
         main.cpp
+        Shader.cpp
 )
 
 add_executable(
@@ -45,4 +46,9 @@ add_executable(
 target_link_libraries(
         ${PROJECT_NAME}
         ${ALL_LIBS}
+)
+
+file(
+        COPY ${CMAKE_CURRENT_SOURCE_DIR}/data
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
 )
